@@ -1,0 +1,15 @@
+name: SimpleManualWork
+on:
+
+  workflow_dispatch:
+
+    #branches: [main]
+    
+jobs:
+  
+  Disable-for-master-branch:
+   
+    if: github.ref != 'refs/heads/master'
+    runs-on: ubuntu-latest
+     
+    #if: "!contains(github.event.commits[0].message, '[skip ci]')"
