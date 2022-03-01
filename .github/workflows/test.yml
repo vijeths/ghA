@@ -2,14 +2,16 @@ name: SimpleManualWork
 on:
 
   workflow_dispatch:
+  push:
 
-    #branches: [main]
+    branches: [main]
     
 jobs:
   
   Disable-for-master-branch:
    
-    if: github.ref != 'refs/heads/main'
+    #if: github.ref != 'refs/heads/main'
     runs-on: ubuntu-latest
+     echo "nvhv"
      
     #if: "!contains(github.event.commits[0].message, '[skip ci]')"
